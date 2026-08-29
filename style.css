@@ -1,0 +1,82 @@
+body {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    gap: 12px;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.card.open {
+    background-color: lightblue;
+}
+
+.card.matched {
+    visibility: hidden;
+}
+
+.win-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.win-box {
+    background: white;
+    color: #222;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.win-box h2 {
+    font-size: 40px;
+}
+
+#restart {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.confetti {
+    position: fixed;
+    top: -50px;
+    font-size: 30px;
+    animation: fall 4s linear;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
